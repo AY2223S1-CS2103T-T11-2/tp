@@ -37,7 +37,6 @@ public class EditInternshipDescriptorBuilder {
         descriptor.setPosition(internship.getPosition());
         descriptor.setPhone(internship.getPhone());
         descriptor.setEmail(internship.getEmail());
-        //descriptor.setStatus(internship.getStatus());
         descriptor.setAddress(internship.getAddress());
         descriptor.setTags(internship.getTags());
     }
@@ -81,14 +80,6 @@ public class EditInternshipDescriptorBuilder {
         descriptor.setAddress(new Address(address));
         return this;
     }
-
-    ///**
-    // * Sets the {@code Status} of the {@code EditInternshipDescriptor} that we are building.
-    // */
-    // public EditInternshipDescriptorBuilder withStatus(String status) {
-    // descriptor.setStatus(new Status(status));
-    // return this;
-    // }
 
     /**
      * Parses the {@code tags} into a {@code Set<Tag>} and set it to the {@code EditInternshipDescriptor}
