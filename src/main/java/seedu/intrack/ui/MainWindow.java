@@ -32,6 +32,7 @@ public class MainWindow extends UiPart<Stage> {
 
     // Independent Ui parts residing in this Ui container
     private InternshipListPanel internshipListPanel;
+    private SelectedInternshipPanel internshipListPanel2;
     private ResultDisplay resultDisplay;
     private HelpWindow helpWindow;
 
@@ -49,6 +50,9 @@ public class MainWindow extends UiPart<Stage> {
 
     @FXML
     private StackPane statusbarPlaceholder;
+
+    @FXML
+    private StackPane internshipPanelPlaceholder;
 
     /**
      * Creates a {@code MainWindow} with the given {@code Stage} and {@code Logic}.
@@ -112,6 +116,9 @@ public class MainWindow extends UiPart<Stage> {
     void fillInnerParts() {
         internshipListPanel = new InternshipListPanel(logic.getFilteredInternshipList());
         internshipListPanelPlaceholder.getChildren().add(internshipListPanel.getRoot());
+
+        internshipListPanel2 = new SelectedInternshipPanel(logic.getSelectedInternship());
+        internshipPanelPlaceholder.getChildren().add(internshipListPanel2.getRoot());
 
         resultDisplay = new ResultDisplay();
         resultDisplayPlaceholder.getChildren().add(resultDisplay.getRoot());

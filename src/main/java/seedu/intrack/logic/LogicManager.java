@@ -78,4 +78,9 @@ public class LogicManager implements Logic {
     public void setGuiSettings(GuiSettings guiSettings) {
         model.setGuiSettings(guiSettings);
     }
+
+    @Override
+    public ObservableList<Internship> getSelectedInternship() {
+        return model.getSelectedInternship();
+    }
 }
